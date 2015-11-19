@@ -11,15 +11,15 @@ built on ruby 2.2; rails 4.2
 Running the app:
 
 Pre-requirements:
-  ngrok - to deploy on the internet; https://ngrok.com/
-  redis-server; sudo apt-get install redis-server
-  
+ =>  ngrok - to deploy on the internet; https://ngrok.com/
+ =>  redis-server; sudo apt-get install redis-server
+
 commands are:
-  bundle install
-  rails s
-  redis-server
-  bundle exec sidekiq
-  ./ngrok http 3000
+ =>  bundle install
+ =>  rails s
+ =>  redis-server (in a separate terminal)
+ =>  bundle exec sidekiq (in a separate terminal)
+ =>  ./ngrok http 3000 ( in a separate terminal)
 
 now that the webapp is hosted publically, we can use the url at Twilio
 we configure the app now.
@@ -36,3 +36,4 @@ url for phase 2 and 3 is the default page.
 After filling in the config parameter, we run the app in production mode:
 
 rails s -e production
+
