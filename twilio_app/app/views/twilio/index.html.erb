@@ -1,0 +1,14 @@
+<div>
+	<% if flash[:error] %> <%= flash[:error] %> <% end %>
+	<%= form_tag("/", method: "get") do %>
+		<%= label_tag(:num, "Ph no") %>
+		<%= text_field_tag :num, nil, :required => true,:placeholder => "Phone Number (Required)", :maxlength => 12, :size => 20 %>
+		</br>
+		<%= label_tag(:time, "Delay ") %>
+		<%= text_field_tag :time, nil, :placeholder => "delay in minutes", :maxlength => 5, :size => 20%>
+		</br>
+		<%= submit_tag("Call") %>
+	<% end %>
+
+	<% if flash[:notice] %> <%= flash[:notice] %> <% end %>
+</div>
