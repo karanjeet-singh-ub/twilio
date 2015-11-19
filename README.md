@@ -8,13 +8,31 @@ Rails application to:
 
 built on ruby 2.2; rails 4.2
 
+Running the app:
+
+Pre-requirements:
+  ngrok - to deploy on the internet; https://ngrok.com/
+  redis-server; sudo apt-get install redis-server
+  
+commands are:
+  bundle install
+  rails s
+  redis-server
+  bundle exec sidekiq
+  ./ngrok http 3000
+
+now that the webapp is hosted publically, we can use the url at Twilio
+we configure the app now.
+
 config.application.rb holds:
 
 1. Twilio number (config.twilio_number)
-2. host_url (config.host_url); same to be used in the Twilio account for calls.
+2. host_url (config.host_url); same to be used in the Twilio account for calls. this the ngrok hosted url.
+3. twilio account sid, auth token are in config/secrets.yml
 
-application can be launched and deployed on ngork at the same port ./ngrok http 3000
 url for phase 1 is <hostname:port>/ivr/welcome
 url for phase 2 and 3 is the default page.
 
-twilio account sid, auth token are in config/secrets.yml
+After filling in the config parameter, we run the app in production mode:
+
+rails s -e production
