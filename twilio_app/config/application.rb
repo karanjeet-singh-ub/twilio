@@ -24,7 +24,7 @@ module TwillioApp
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
-    config.host_url="http://3dbf3453.ngrok.io/ivr/welcome"
+    config.host_url="http://79693a6d.ngrok.io/ivr/welcome"
     config.twilio_number="+19734255039"
     config.phoneRegEx = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
     config.numrange = /^([1-9][0-9]{0,2}|1000)$/;
