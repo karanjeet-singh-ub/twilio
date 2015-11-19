@@ -11,15 +11,15 @@ built on ruby 2.2; rails 4.2
 Running the app:
 
 Pre-requirements:
- =>  ngrok - to deploy on the internet; https://ngrok.com/
- =>  redis-server; sudo apt-get install redis-server
+ 1. ngrok - to deploy on the internet; https://ngrok.com/
+ 2.  redis-server; sudo apt-get install redis-server
 
 commands are:
- =>  bundle install
- =>  rails s
- =>  redis-server (in a separate terminal)
- =>  bundle exec sidekiq (in a separate terminal)
- =>  ./ngrok http 3000 ( in a separate terminal)
+ 1.  bundle install
+ 2.  rails s
+ 3.  redis-server (in a separate terminal)
+ 4.  bundle exec sidekiq (in a separate terminal)
+ 5.  ./ngrok http 3000 ( in a separate terminal)
 
 now that the webapp is hosted publically, we can use the url at Twilio
 we configure the app now.
